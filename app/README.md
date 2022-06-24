@@ -21,6 +21,8 @@ Se haría con los siguientes comandos:
 `$ pip install -r requirements.txt`   
 
 ## Ejecución
+Para poder utilizar el modelo de clasificación en la aplicación debemos descomprimirlo:  
+`$ unzip models.zip`  
 Y por último, ya solo queda ejecutar el fichero que contiene el código que genera la aplicación:  
 `$ python3 app_final.py`   
 Tras esto, aparecerá una URL local que se debe abrir en un navegador, y la aplicación estará lista para utilizarse.  
