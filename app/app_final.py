@@ -36,7 +36,7 @@ def Header(name, app):
 RANDOM_URLS = open("urls/random_skin_cancer.txt").read().split("\n")[:-1] # urls de las imagenes
 
 # Load model 
-model = tf.keras.models.load_model('/Users/inma/Desktop/tfg/codigo/modelos/12_inceptionResNet_model_final')
+model = tf.keras.models.load_model('models/v2_model_06')
 
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP]) # no se que hace
@@ -136,7 +136,7 @@ def run_model(n_clicks, n_submit, url): # lo que hace cuando se pulsa ejecutar -
                                          num_samples=1000)
     temp, mask = explanation.get_image_and_mask(explanation.top_labels[0], 
                                             positive_only=False, 
-                                            num_features=1000, 
+                                            num_features=10, 
                                             hide_rest=False)
     temp_image = tf.keras.utils.array_to_img(temp)
                                                                                
