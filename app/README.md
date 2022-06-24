@@ -1,68 +1,29 @@
-<!--
-To get started, replace
-Classification with Data-efficient image Transformers (DeiT) with your app name (e.g. Dash Super Cool App)
-dash-deit with the short handle (e.g. dash-super-cool)
+# Aplicación de diagnóstico y clasificación de cáncer de piel
 
-If this is in dash sample apps, uncomment the second "git clone https..." and remove the first one.
-If this is in dash sample apps and you have a colab demo, uncomment the "Open in Colab" link to see the badge (make sure to create a ColabDemo.ipynb) first.
+## Manual de instalación
 
--->
-# Classification with Data-efficient image Transformers (DeiT)
-<!-- 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/plotly/dash-sample-apps/blob/master/apps/dash-deit/ColabDemo.ipynb)
- -->
+### Requisitos previos
+Los únicos requisitos previos con los que debe contar la máquina son tener instalado Python y pip en una versión reciente.   
+Si no se tienen, en los siguientes enlaces se explica cómo y donde hacerlo:  
+- Python: https://www.python.org/downloads/
+- Pip: https://pypi.org/project/pip/
 
-*A User Interface for DeiT built with Dash in ~130 lines of pure Python. [Click here](https://dash-gallery.plotly.host/dash-deit/) for a demo.*
+### Instalación
+En primer lugar hay que descargarse el proyecto, que está subido a un repositorio de GitHub.  
+Se utilizará git para clonarlo. Desde una terminal se ejecuta:  
+`$ git clone https://github.com/InmaJimenez26/TFG.git`   
+Tras descargarlo, se debe acceder a la carpeta que contiene la aplicación.    
+`$ cd TFG/app`    
+El siguiente paso es crear un entorno de progración python, y activarlo para comenzar a instalar las dependencias necesarias.  
+Se haría con los siguientes comandos:  
+`$ python3 -m venv venv`   
+`$ source venv/bin/activate # for Windows, use venv\Scripts\activate.bat`   
+`$ pip install -r requirements.txt`   
 
-[Data-efficient image Transformers (DeiT)](https://ai.facebook.com/blog/data-efficient-image-transformers-a-promising-new-technique-for-image-classification/) is a new family of computer vision models that achieve near state-of-the-art performance on ImageNet with significantly less training data and computation resources. The smaller variant can process up to 500 images per second with very high accuracy, and the largest variant matches the performance of EfficientNet-B7 on ImageNet while being 2x faster to train.
+## Ejecución
+Y por último, ya solo queda ejecutar el fichero que contiene el código que genera la aplicación:  
+`$ python3 app_final.py`   
+Tras esto, aparecerá una URL local que se debe abrir en un navegador, y la aplicación estará lista para utilizarse.  
+79 
 
-![](assets/demo.gif)
-
-## Overview
-
-- The code is open-source and ready to be forked.
-- Everything is in pure Python - not a single line of JavaScript required.
-- The entire app was written in ~130 lines of Python, including downloading the images, torch transformations, running the model, and formatting the ImageNet labels.
-- From development to production in minutes with [Dash Kubernetes](https://plotly.com/dash/kubernetes/) - no need to spend hours figuring out deployment.
-- The application was based on [Dash DETR](https://github.com/plotly/dash-detr)
-
-
-## Instructions
-
-To get started, first clone this repo:
-
-```
-git clone https://github.com/plotly/dash-sample-apps.git
-cd dash-sample-apps/apps/dash-deit
-```
-
-
-Create and activate a conda env:
-```
-conda create -n dash-deit python=3.7.6
-conda activate dash-deit
-```
-
-Or a venv (make sure your `python3` is 3.6+):
-```
-python3 -m venv venv
-source venv/bin/activate  # for Windows, use venv\Scripts\activate.bat
-```
-
-Install all the requirements:
-
-```
-pip install -r requirements.txt
-```
-
-You can now run the app:
-```
-python app.py
-```
-
-and visit http://127.0.0.1:8050/.
-
-## Contact
-
-Interested in building or deploying apps like this? [Reach out](https://plotly.com/contact-us/) or [get a demo](https://plotly.com/get-demo).
 
